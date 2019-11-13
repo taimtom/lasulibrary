@@ -1,0 +1,367 @@
+{% load staticfiles %}
+    <div id="sidebar">
+
+      <div class="inner">
+
+          <!-- Search Box -->
+          <section id="search" class="alt">
+            <form method="get" action="{% url 'book_list' %}">
+              <input type="text" name="search" id="search" placeholder="Search..." />
+            </form>
+          </section>
+            
+          <!-- Menu -->
+          <nav id="menu">
+            <ul>
+              <li><a href="" title="homepage">Homepage</a></li>
+              <li><a href="simple_page.html" title="page">Contact</a></li>
+              <li>
+                <span class="opener">Class A – General Works</span>
+                <ul>
+                  <form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass AC – Collections. Series. Collected works</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AE">AE – Encyclopedias</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AG">Subclass AG – Dictionaries and other general reference works</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AI">Subclass AI – Indexes</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AM">Subclass AM – Museums. Collectors and collecting</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AN">Subclass AN – Newspapers</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AP">Subclass AP – Periodicals</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AS">Subclass AS – Academies and learned societies</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AY">Subclass AY – Yearbooks. Almanacs. Directories</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AZ">Subclass AZ – History of scholarship and learning. The humanities</button></li>
+                  </form>
+                </ul>
+              </li>
+              <li>
+                <span class="opener">Class B – Philosophy, Psychology, Religion</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="B">Subclass B – Philosophy (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BC">Subclass BC – Logic</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BD">Subclass BD – Speculative philosophy</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BF">Subclass BF – Psychology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BH">Subclass BH – Aesthetics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BJ">Subclass BJ – Ethics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BL">Subclass BL – Religions. Mythology. Rationalism</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BM">Subclass BM – Judaism</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BP">Subclass BP – Islam. Bahaism. Theosophy, etc.</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BQ">Subclass BQ – Buddhism</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BR">Subclass BR – Christianity</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BS">Subclass BS – The Bible</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BT">Subclass BT – Doctrinal theology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BV">Subclass BV – Practical Theology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="BX">Subclass BX – Christian Denominatiobuttons</li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class D</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass D – History (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DA – Great Britain</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DAW – Central Europe</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DB – Austria – Liechtenstein – Hungary – Czechoslovakia</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DC – France – Andorra – Monaco</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DD – Germany</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DE – Greco-Roman World</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DF – Greece</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DG – Italy – Malta</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DH – Low Countries – Benelux Countries</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DJ – Netherlands (Holland)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DJK – Eastern Europe (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DK – Russia. Soviet Union. Former Soviet Republics – Poland</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DL – Northern Europe. Scandinavia</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DP – Spain – Portugal</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DQ – Switzerland</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DR – Balkan Peninsula</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DS – Asia</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DT – Africa</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DU – Oceania (South Seas)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass DX – Romanies</button></li>
+                </form></ul>
+              </li>
+              <li><button class='dropdown-btn' name="search" value="AC">Class E – History of the Americas</button></li>
+              <li><button class='dropdown-btn' name="search" value="AC">Class F – Local History of the Americas</button></li>
+              <li>
+                <span class="opener">Class G – Geography, Anthropology, Recreation</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass G – Geography (General). Atlases. Maps</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GA – Mathematical geography. Cartography</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GB – Physical geography</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GC – Oceanography</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GE – Environmental Sciences</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GF – Human ecology. Anthropogeography</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GN – Anthropology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GR – Folklore</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GT – Manners and customs (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass GV – Recreation. Leisure</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class H – Social Sciences</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass H – Social sciences (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HA – Statistics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HB – Economic theory. Demography</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HC – Economic history and conditions</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HD – Industries. Land use. Labor</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HE – Transportation and communications</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HF – Commerce</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HG – Finance</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HJ – Public finance</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HM – Sociology (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HN – Social history and conditions. Social problems. Social reform</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HQ – The family. Marriage, Women and Sexuality</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HS – Societies: secret, benevolent, etc.</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HT – Communities. Classes. Races</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HV – Social pathology. Social and public welfare. Criminology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass HX – Socialism. Communism. Anarchism</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class J – Political Science</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass J – General legislative and executive papers</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JA – Political science (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JC – Political theory</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JF – Political institutions and public administration</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JJ – Political institutions and public administration (North America)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JK – Political institutions and public administration (United States)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JL – Political institutions and public administration (Canada, Latin America, etc.)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JN – Political institutions and public administration (Europe)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JQ – Political institutions and public administration (Asia, Africa, Australia, Pacific </li>Area, </button>etc.)
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JS – Local government. Municipal government</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JV – Colonies and colonization. Emigration and immigration. International migration</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JX – International law, see JZ and KZ (obsolete)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass JZ – International relations</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class K – Law</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass K – Law in general. Comparative and uniform law. Jurisprudence</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KB – Religious law in general. Comparative religious law. Jurisprudence</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KBM – Jewish law</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KBP – Islamic law</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KBR – History of canon law</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KBS – Canon law of Eastern churches</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KBT – Canon law of Eastern Rite Churches in Communion with the Holy See of Rome</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KBU – Law of the Roman Catholic Church. The Holy See</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclasses – KD/KDK - United Kingdom and Ireland</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KDZ – America. North America</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KE – Canada</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KF – United States</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KG – Latin America – Mexico and Central America – West Indies. Caribbean area</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KH – South America</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclasses KJ-KKZ – Europe</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclasses KL-KWX – Asia and Eurasia, Africa, Pacific Area, and Antarctica</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KU/KUQ – Law of Australia and New Zealand</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass KZ – Law of nations</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class L – Education</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass L – Education (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LA – History of education</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LB – Theory and practice of education</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LC – Special aspects of education</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LD – Individual institutions – United States</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LE – Individual institutions – America (except United States)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LF – Individual institutions – Europe</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LG – Individual institutions – Asia, Africa, Indian Ocean islands, Australia, New </li>Zealand, Pacific is</button>lands
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LH – College and school magazines and papers</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LJ – Student fraternities and societies, United States</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass LT – Textbooks</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class M – Music</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass M – Music</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass ML – Literature on music</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass MT – Instruction and study</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class N – Fine Arts</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass N – Visual arts</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass NA – Architecture</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass NB – Sculpture</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass NC – Drawing. Design. Illustration</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass ND – Painting</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass NE – Print media</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass NK – Decorative arts</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass NX – Arts in general</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class P – Language and Literature</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass P – Philology. Linguistics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PA – Greek language and literature. Latin language and literature</button></li>
+                  
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PB – Modern languages. Celtic languages and literature</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PC – Romanic languages</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PD – Germanic languages. Scandinavian languages</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PE – English language</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PF – West Germanic languages</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PG – Slavic languages and literatures. Baltic languages.</button></li>
+                  
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PH – Uralic languages. Basque language</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PJ – Oriental languages and literatures</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PK – Indo-Iranian languages and literatures</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PL – Languages and literatures of Eastern Asia, Africa, Oceania</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PM – Hyperborean, Native American, and artificial languages</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PN – Literature (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PQ – French literature – Italian literature – Spanish literature – </li>Portuguese liter</button>ature
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PR – English literature</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PS – American literature</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PT – German literature – Dutch literature – Flemish literature Afrikaans literbuttonture -
+                  Scandinavian literature – Old Norse literature: Old Icelandic and Old Norwegian – Modern Icelandic literature –
+                  Faroese literature – Danish literature – Norwegian literature – Swedish literature</a></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass PZ – Fiction and juvenile belles lettres</button></li>
+                                  
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class Q – Science</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass Q – Science (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QA – Mathematics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QB – Astronomy</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QC – Physics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QD – Chemistry</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QE – Geology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QH – Natural history – Biology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QK – Botany</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QL – Zoology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QM – Human anatomy</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QP – Physiology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass QR – Microbiology</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class R – Medicine</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass R – Medicine (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RA – Public aspects of medicine</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RB – Pathology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RC – Internal medicine</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RD – Surgery</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RE – Ophthalmology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RF – Otorhinolaryngology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RG – Gynecology and Obstetrics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RJ – Pediatrics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RK – Dentistry</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RL – Dermatology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RM – Therapeutics. Pharmacology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RS – Pharmacy and materia medica</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RT – Nursing</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RV – Botanic, Thomsonian, and Eclectic medicine</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RX – Homeopathy</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass RZ – Other systems of medicine</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class S – Agriculture</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass S – Agriculture (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass SB – Horticulture. Plant propagation. Plant breeding</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass SD – Forestry. Arboriculture. Silviculture</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass SF – Animal husbandry. Animal science</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass SH – Aquaculture. Fisheries. Angling</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass SK – Hunting</a></li>              button </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class T – Technology</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass T – Technology (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TA – Engineering Civil engineering (General).</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TC – Hydraulic engineering. Ocean engineering</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TD – Environmental technology. Sanitary engineering</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TE – Highway engineering. Roads and pavements</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TF – Railroad engineering and operation</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TG – Bridges</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TH – Building construction</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TJ – Mechanical engineering and machinery</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TK – Electrical engineering. Electronics. Nuclear engineering</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TL – Motor vehicles. Aeronautics. Astronautics</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TN – Mining engineering. Metallurgy</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TP – Chemical technology</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TR – Photography</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TS – Manufacturing engineering. Mass production</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TT – Handicrafts. Arts and crafts</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass TX – Home economics</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class U – Military Science</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass U – Military science (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UA – Armies: Organization, distribution, military situation</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UB – Military administration</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UC – Military maintenance and transportation</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UD – Infantry</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UE – Cavalry. Armor</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UF – Artillery</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UG – Military engineering. Air forces</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass UH – Other military services</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class V – Naval Science</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass V – Naval science (General)</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VA – Navies: Organization, distribution, naval situation</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VB – Naval administration</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VC – Naval maintenance</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VD – Naval seamen</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VE – Marines</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VF – Naval ordnance</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VG – Minor services of navies</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VK – Navigation. Merchant marine</button></li>
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass VM – Naval architecture. Shipbuilding. Marine engineering</button></li>
+                </form></ul>
+              </li>
+              <li>
+                <span class="opener">Class Z – Bibliography, Library Science</span>
+                <ul><form method="get" action="{% url 'book_list' %}">
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass Z – Books (General). Writing. Paleography. Book industries and trade. </li>Libraries. Bibliog</button>raphy
+                  <li><button class='dropdown-btn' name="search" value="AC">Subclass ZA – Information resources/materials</button></li>
+                </form></ul>
+              </li>
+              <li><a href="https://www.google.com">External Link</a></li>
+            </ul>
+          </nav>
+
+          <!-- Featured Posts -->
+          <div class="featured-posts">
+            <div class="heading">
+              <h2>Featured Posts</h2>
+            </div>
+            <div class="owl-carousel owl-theme">
+              <a href="#">
+                <div class="featured-item">
+                  <img src="assets/images/featured_post_01.jpg" alt="featured one">
+                  <p>Aliquam egestas convallis eros sed gravida. Curabitur consequat sit.</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="featured-item">
+                  <img src="assets/images/featured_post_01.jpg" alt="featured two">
+                  <p>Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis.</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="featured-item">
+                  <img src="assets/images/featured_post_01.jpg" alt="featured three">
+                  <p>Suspendisse ac convallis urna, vitae luctus ante. Donec sit amet.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+

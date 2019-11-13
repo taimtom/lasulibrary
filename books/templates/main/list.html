@@ -1,0 +1,30 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block content %}
+{{block.super}}
+<!-- Services -->
+
+  <section class="services">
+    <div class="container-fluid">
+      <div class="row">
+        {% for book in object_list %}
+
+        <div class="col-md-4">
+            <a href="{{book.document.url}}">
+          <div class="service-item first-item">
+            <div class="icon">{% if book.image %} <img src="{{book.image.url}}"/> {% else %} <img src="{% static 'basic.png' %}"/> {% endif %} </div>
+            <h4>{{book.title| title}}</h4>
+            <p> <small> Author : {{book.author}} |  Published on : {{book.published_date}}</small></p><p> {{book.description | truncatechars:100 }}<br/> <span>{{book.isbn}}</span> </p>
+            <p><a href="{{book.document.url}}">Read </a></p>
+          </div></a>
+        </div>
+        {% endfor %}
+        
+       
+        
+        
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
